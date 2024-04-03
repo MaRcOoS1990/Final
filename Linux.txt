@@ -1,0 +1,178 @@
+root@Ubuntu:/home/marcoos# mkdir finalwork
+root@Ubuntu:/home/marcoos# cd finalwork/
+root@Ubuntu:/home/marcoos/finalwork# cat pets
+cat: pets: No such file or directory
+root@Ubuntu:/home/marcoos/finalwork# cat > pets
+dog
+cat
+goldfish
+hamster     
+^C
+root@Ubuntu:/home/marcoos/finalwork# cat > packAnimals
+horse
+camal
+donkey^C    
+root@Ubuntu:/home/marcoos/finalwork# cat packAnimals 
+horse
+camal
+root@Ubuntu:/home/marcoos/finalwork# cat > packAnimals 
+horse
+camal
+donkey
+^C
+root@Ubuntu:/home/marcoos/finalwork# cat packAnimals 
+horse
+camal
+donkey
+root@Ubuntu:/home/marcoos/finalwork# ls -al
+total 16
+drwxr-xr-x  2 root    root    4096 апр  3 16:52 .
+drwxr-x--- 31 marcoos marcoos 4096 апр  3 16:48 ..
+-rw-r--r--  1 root    root      19 апр  3 16:54 packAnimals
+-rw-r--r--  1 root    root      25 апр  3 16:50 pets
+root@Ubuntu:/home/marcoos/finalwork# cat pets packAnimals > humanfriends
+root@Ubuntu:/home/marcoos/finalwork# ls -al
+total 20
+drwxr-xr-x  2 root    root    4096 апр  3 16:54 .
+drwxr-x--- 31 marcoos marcoos 4096 апр  3 16:48 ..
+-rw-r--r--  1 root    root      44 апр  3 16:54 humanfriends
+-rw-r--r--  1 root    root      19 апр  3 16:54 packAnimals
+-rw-r--r--  1 root    root      25 апр  3 16:50 pets
+root@Ubuntu:/home/marcoos/finalwork# cat humanfriends 
+dog
+cat
+goldfish
+hamster
+horse
+camal
+donkey
+root@Ubuntu:/home/marcoos/finalwork# mkdir ../newAnimals
+root@Ubuntu:/home/marcoos/finalwork# mv * ../newAnimals/
+root@Ubuntu:/home/marcoos/finalwork# ls -al
+total 8
+drwxr-xr-x  2 root    root    4096 апр  3 16:56 .
+drwxr-x--- 32 marcoos marcoos 4096 апр  3 16:55 ..
+root@Ubuntu:/home/marcoos/finalwork# cd ../newAnimals/
+root@Ubuntu:/home/marcoos/newAnimals# ls -al
+total 20
+drwxr-xr-x  2 root    root    4096 апр  3 16:56 .
+drwxr-x--- 32 marcoos marcoos 4096 апр  3 16:55 ..
+-rw-r--r--  1 root    root      44 апр  3 16:54 humanfriends
+-rw-r--r--  1 root    root      19 апр  3 16:54 packAnimals
+-rw-r--r--  1 root    root      25 апр  3 16:50 pets
+
+root@Ubuntu:/home/marcoos/newAnimals# apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                                                                       
+Hit:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                                     
+Hit:4 https://download.docker.com/linux/ubuntu jammy InRelease                                                                                          
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease                                                                                        
+Hit:6 http://nginx.org/packages/ubuntu jammy InRelease                                                                                                  
+Hit:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy InRelease                                                      
+Get:8 https://esm.ubuntu.com/apps/ubuntu jammy-apps-security InRelease [7 553 B]
+Get:9 https://esm.ubuntu.com/apps/ubuntu jammy-apps-updates InRelease [7 456 B]
+Get:10 https://esm.ubuntu.com/infra/ubuntu jammy-infra-security InRelease [7 450 B]
+Get:11 https://esm.ubuntu.com/infra/ubuntu jammy-infra-updates InRelease [7 449 B]
+Fetched 29,9 kB in 2s (13,7 kB/s)         
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu jammy InRelease' doesn't support architecture 'i386'
+root@Ubuntu:/home/marcoos/newAnimals# apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                                                                       
+Hit:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                                                                     
+Hit:4 http://nginx.org/packages/ubuntu jammy InRelease                                                                                                  
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease                                                                                        
+Hit:6 https://download.docker.com/linux/ubuntu jammy InRelease                                                                                       
+Hit:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy InRelease                                                      
+Hit:8 https://esm.ubuntu.com/apps/ubuntu jammy-apps-security InRelease
+Hit:9 https://esm.ubuntu.com/apps/ubuntu jammy-apps-updates InRelease
+Hit:10 https://esm.ubuntu.com/infra/ubuntu jammy-infra-security InRelease
+Hit:11 https://esm.ubuntu.com/infra/ubuntu jammy-infra-updates InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu jammy InRelease' doesn't support architecture 'i386'
+root@Ubuntu:/home/marcoos/newAnimals# apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+mysql-server is already the newest version (8.0.36-0ubuntu0.22.04.1).
+The following packages were automatically installed and are no longer required:
+  linux-headers-6.5.0-21-generic linux-hwe-6.5-headers-6.5.0-21 linux-image-6.5.0-21-generic linux-modules-6.5.0-21-generic
+  linux-modules-extra-6.5.0-21-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+root@Ubuntu:/home/marcoos/newAnimals# wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+--2024-04-03 16:59:44--  https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+Resolving dev.mysql.com (dev.mysql.com)... 92.123.206.112, 2a02:26f0:9500:98d::2e31, 2a02:26f0:9500:98f::2e31
+Connecting to dev.mysql.com (dev.mysql.com)|92.123.206.112|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://repo.mysql.com//mysql-apt-config_0.8.26-1_all.deb [following]
+--2024-04-03 16:59:45--  https://repo.mysql.com//mysql-apt-config_0.8.26-1_all.deb
+Resolving repo.mysql.com (repo.mysql.com)... 23.37.58.58, 2a02:26f0:1700:78f::1d68, 2a02:26f0:1700:784::1d68
+Connecting to repo.mysql.com (repo.mysql.com)|23.37.58.58|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18088 (18K) [application/x-debian-package]
+Saving to: ‘mysql-apt-config_0.8.26-1_all.deb’
+
+mysql-apt-config_0.8.26-1_all.deb      100%[=========================================================================>]  17,66K  --.-KB/s    in 0,004s  
+
+2024-04-03 16:59:46 (4,12 MB/s) - ‘mysql-apt-config_0.8.26-1_all.deb’ saved [18088/18088]
+
+root@Ubuntu:/home/marcoos/newAnimals# dpkg -i mysql-apt-config_0.8.26-1_all.deb
+Selecting previously unselected package mysql-apt-config.
+(Reading database ... 293081 files and directories currently installed.)
+Preparing to unpack mysql-apt-config_0.8.26-1_all.deb ...
+Unpacking mysql-apt-config (0.8.26-1) ...
+Setting up mysql-apt-config (0.8.26-1) ...
+root@Ubuntu:/home/marcoos/newAnimals# sudo mysql -u root -p~
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.36-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> exit
+Bye
+
+root@Ubuntu:/home/marcoos/newAnimals# wget http://archive.ubuntu.com/ubuntu/pool/main/n/nano/nano_7.2-1_amd64.deb
+--2024-04-03 17:06:42--  http://archive.ubuntu.com/ubuntu/pool/main/n/nano/nano_7.2-1_amd64.deb
+Resolving archive.ubuntu.com (archive.ubuntu.com)... 91.189.91.82, 185.125.190.36, 91.189.91.81, ...
+Connecting to archive.ubuntu.com (archive.ubuntu.com)|91.189.91.82|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 279686 (273K) [application/vnd.debian.binary-package]
+Saving to: ‘nano_7.2-1_amd64.deb’
+
+nano_7.2-1_amd64.deb                   100%[=========================================================================>] 273,13K   392KB/s    in 0,7s    
+
+2024-04-03 17:06:44 (392 KB/s) - ‘nano_7.2-1_amd64.deb’ saved [279686/279686]
+
+
+root@Ubuntu:/home/marcoos/newAnimals# dpkg -i nano_7.2-1_amd64.deb
+(Reading database ... 293086 files and directories currently installed.)
+Preparing to unpack nano_7.2-1_amd64.deb ...
+Unpacking nano (7.2-1) over (6.2-1) ...
+Setting up nano (7.2-1) ...
+Installing new version of config file /etc/nanorc ...
+Processing triggers for install-info (6.8-4build1) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@Ubuntu:/home/marcoos/newAnimals# dpkg -r nano
+(Reading database ... 293086 files and directories currently installed.)
+Removing nano (7.2-1) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for install-info (6.8-4build1) ...
+root@Ubuntu:/home/marcoos/newAnimals# 
+
+
